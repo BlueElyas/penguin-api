@@ -51,4 +51,4 @@ const penguins = [
   },
 ];
 
-module.exports = penguins;
+export default penguins;

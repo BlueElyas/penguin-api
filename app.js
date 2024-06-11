@@ -1,9 +1,10 @@
-const express = require("express");
+import express from "express";
+import morgan from "morgan";
+import cors from "cors";
+import bodyParser from "body-parser";
+import apiRouter from "./routers/api.js";
+
 const app = express();
-const apiRouter = require("./routers/api");
-const morgan = require("morgan");
-const cors = require("cors");
-const bodyParser = require("body-parser");
 
 // Port set up
 const PORT = process.env.PORT || 4500;
@@ -24,3 +25,5 @@ app.get("/", (req, res) => {
 
 // Mounting API router
 app.use("/api", apiRouter);
+
+export default app;

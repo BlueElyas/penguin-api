@@ -1,7 +1,6 @@
-const penguins = require("./db");
+import penguins from "./db.js";
 
 const getPenguinById = (id) => {
   return penguins.find((penguin) => penguin.id === parseInt(id));
 };
-
-module.exports = getPenguinById;
+export default getPenguinById;

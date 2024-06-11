@@ -1,9 +1,8 @@
-const express = require("express");
-const penguinRouter = express.Router();
-const penguins = require("./db");
-const getPenguinById = require("./utils");
+import express from "express";
+import getPenguinById from "./utils.js";
+import penguins from "./db.js";
 
-module.exports = penguinRouter;
+const penguinRouter = express.Router();
 
 penguinRouter.param("penguinId", (req, res, next, id) => {
   const penguin = getPenguinById(id);
@@ -50,3 +49,5 @@ penguinRouter.delete("/:penguinId", (req, res, next) => {
     res.status(404).send("Delete failed");
   }
 });
+
+export default penguinRouter;
