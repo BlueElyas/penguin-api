@@ -5,7 +5,7 @@ A simple RESTful API for managing penguin data built with Express.
 ## URL
 
 ```
-Link: https://penguin-api.onrender.com
+https://penguin-api.onrender.com
 ```
 
 ## Installation
